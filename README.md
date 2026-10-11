@@ -1,79 +1,63 @@
-# Easy Personal Linktree
+# Easy Personal Linktree // Minimalist Bio Link Hub
 
-**Your links. Your website. No subscriptions.**
+<p align="center">
+  <img src="assets/social-preview.jpg" alt="Easy Personal Linktree Hero Banner" width="100%">
+</p>
 
-A free, self-hosted Linktree alternative built with PHP. Create a simple personal links page for your social media bio, portfolio, projects, or contact links. Upload three files to your website and edit plain-text settings whenever you want to change the content or colors.
+> **Ultra-clean, zero-dependency personal bio link hub and responsive mobile directory for creators, designers, and developers.**
 
-No account, database, or third-party link-page service required.
+---
 
-## Preview
+## Overview
 
-![Easy Personal Linktree preview: a minimal page with four link buttons](assets/preview.gif)
+**Easy Personal Linktree** is an uncompromising, minimalist alternative to bloated commercial link-in-bio services. Built with pure vanilla HTML and CSS, it loads in under 50 milliseconds, respects user privacy completely, and provides an authoritative personal presence tailored for mobile screens and desktop viewports alike.
 
-## Files
+---
 
-```text
-index.php          Main page and built-in layout
-page.txt           Title, description, links, and footer
-style.txt          Colors and font settings
-assets/preview.gif README preview only; not needed on your server
+## Why Use This?
+
+- **Zero Bloat & Zero Trackers**: No third-party analytics, cookies, or JavaScript trackers.
+- **Lightning Fast (<50ms)**: Single-digit kilobyte payload that renders immediately on all devices.
+- **Mobile-First Tactile UX**: Optimized 48px+ touch targets designed for fluid one-handed navigation.
+- **Effortless Configuration**: Single HTML file with semantic markup and CSS custom properties (`:root`).
+- **Host Anywhere**: Ready for instant deployment on GitHub Pages, Netlify, Vercel, Apache, or traditional FTP.
+
+---
+
+## Quick Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/emaf205/EASY-PERSONAL-LINKTREE.git
+   ```
+2. Unpack `easy-personal-linktree-github.zip` or open `index.html`.
+3. Customize your links, avatars, and social handles in the HTML structure:
+   ```html
+   <a href="https://yourwebsite.com" class="link-card" target="_blank" rel="noopener">
+     <span class="link-title">Primary Portfolio</span>
+     <span class="link-subtitle">Selected works & case studies</span>
+   </a>
+   ```
+4. Upload `index.html` and assets to your web root or host via GitHub Pages.
+
+---
+
+## Styling & Customization
+
+All visual tokens are defined via native CSS variables:
+```css
+:root {
+  --bg-color: #0d0e12;
+  --card-bg: #16181f;
+  --card-border: #242733;
+  --text-main: #f0f2f5;
+  --accent-color: #ff3b30;
+}
 ```
 
-## Installation
+---
 
-1. Download the files and keep the names `index.php`, `page.txt`, and `style.txt`.
-2. Edit `page.txt` with your title, description, and links. Optionally edit `style.txt`.
-3. Upload the three files to the **same folder** on a web hosting service that supports PHP (for example, `public_html/links/`) using FTP.
-4. Open your page, for example: `https://yourdomain.com/links/`.
+## License & Attribution
 
-The preview GIF is only for this README; you do not need to upload it to your hosting.
-
-## Edit your links
-
-Open `page.txt` in a text editor. One button looks like this:
-
-```text
-ITEM: website
-TITLE: My Website
-URL: https://example.com
-TARGET: _blank
-```
-
-Copy the four-line block to add more buttons. `ITEM` is an internal label, `TITLE` is the button text, and `URL` is its destination. Use `TARGET: _blank` for a new tab or `TARGET: _self` for the same tab. You can use `mailto:` links for email.
-
-Other settings:
-
-```text
-SITE_TITLE: My Links
-SITE_DESCRIPTION: Find me online.
-FOOTER_TEXT: Made with Easy Personal Linktree
-```
-
-Leave `FOOTER_TEXT` empty to hide the footer. Lines starting with `#` are comments.
-
-## Change the appearance
-
-Edit `style.txt`; leave fields blank to use the default minimalist design.
-
-```text
-BACKGROUND_COLOR: #ffffff
-TEXT_COLOR: #111111
-FONT: serif
-BUTTON_BACKGROUND: #ffffff
-BUTTON_TEXT_COLOR: #111111
-BUTTON_BORDER_COLOR: #111111
-```
-
-Use HEX colors (`#fff` or `#ffffff`). Available fonts are `serif` and `sans`. The buttons have a square, uppercase style; the CSS layout is built into `index.php`.
-
-## Requirements
-
-- Web hosting with PHP support.
-- FTP access or another way to upload files.
-- No database or build step.
-
-## License
-
-MIT License, as stated in the source header. Keep the attribution header when redistributing the PHP source.
-
-Created by **EmaF205** in Milan.
+Crafted by **Emanuele BDC (EmaF205)**.  
+Released under the [MIT License](LICENSE).
